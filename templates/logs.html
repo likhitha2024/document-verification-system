@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Activity Logs</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h2>System Activity Logs</h2>
+
+<table border="1">
+
+<tr>
+<th>Log Entries</th>
+</tr>
+
+{% for log in logs %}
+<tr>
+<td>{{ log }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/upload">Back to Upload</a>
+
+</body>
+</html>
